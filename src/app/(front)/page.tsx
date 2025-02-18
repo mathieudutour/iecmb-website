@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getDocuments } from "outstatic/server";
+import { load } from "outstatic/server";
 import Link from "next/link";
 
 export default async function Home() {
@@ -197,15 +197,19 @@ export default async function Home() {
 }
 
 async function getData() {
+  const db = await load();
   const projects = (
-    getDocuments("projets", [
-      "title",
-      "description",
-      "etat",
-      "image",
-      "slug",
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ]) as any
+    await db
+      .find({ collection: "projets" }, [
+        "title",
+        "description",
+        "etat",
+        "image",
+        "slug",
+      ])
+      .sort({ publishedAt: -1 })
+      .limit(4)
+      .toArray()
   )
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .map((x: any) => ({ ...x, etat: x.etat[0].value })) as {
@@ -216,13 +220,17 @@ async function getData() {
     slug: string;
   }[];
 
-  const news = getDocuments("actualites", [
-    "title",
-    "description",
-    "image",
-    "slug",
-    "publishedAt",
-  ]) as unknown as {
+  const news = (await db
+    .find({ collection: "actualites" }, [
+      "title",
+      "description",
+      "publishedAt",
+      "image",
+      "slug",
+    ])
+    .sort({ publishedAt: -1 })
+    .limit(3)
+    .toArray()) as unknown as {
     title: string;
     description: string;
     image: string;
