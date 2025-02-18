@@ -46,9 +46,8 @@ export default async function Home() {
         <Image
           src="/images/marc-kargel-qb3Z5BfiAgg-unsplash.jpg"
           alt="Environmental research"
-          layout="fill"
-          objectFit="cover"
-          className="absolute z-0"
+          fill
+          className="object-cover absolute z-0"
         />
         <div className="relative z-10 text-center text-white">
           <h2 className="text-4xl font-bold mb-4">
