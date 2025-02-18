@@ -1,6 +1,6 @@
 {
-  "commit": "11fc2d66a4f8a807134f5ae6749e6dd2ca6e84c1",
-  "generated": "2025-02-18T09:14:55.509Z",
+  "commit": "02abcca1e6ba90fb5a20ff27e3c0f67c3004dd39",
+  "generated": "2025-02-18T09:15:27.171Z",
   "metadata": [
     {
       "__outstatic": {
@@ -73,6 +73,30 @@
       "slug": "impact-des-microplastiques-sur-la-chaine-alimentaire",
       "status": "published",
       "title": "Impact des microplastiques sur la chaîne alimentaire"
+    },
+    {
+      "__outstatic": {
+        "commit": "02abcca1e6ba90fb5a20ff27e3c0f67c3004dd39",
+        "hash": "3581441945",
+        "path": "outstatic/content/projets/etude-sur-la-qualite-de-l-air-urbain.mdx"
+      },
+      "author": {
+        "name": "Mathieu Dutour",
+        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
+      },
+      "collection": "projets",
+      "description": "Analyse approfondie des polluants atmosphériques dans les grandes villes françaises et leurs effets sur la santé respiratoire.",
+      "etat": [
+        {
+          "label": "En cours",
+          "value": "En cours"
+        }
+      ],
+      "image": "/images/kristen-morith-IWpd8KixceA-unsplash.jpg",
+      "publishedAt": "2025-02-18T09:21:03.325Z",
+      "slug": "etude-sur-la-qualite-de-l-air-urbain",
+      "status": "published",
+      "title": "Étude sur la qualité de l'air urbain"
     }
   ]
 }
