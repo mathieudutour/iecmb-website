@@ -1,6 +1,12 @@
 {
-  "title": "Actualités",
-  "slug": "actualites",
+  "title": "actualites",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "image": {
+      "required": false,
+      "fieldType": "Image",
+      "dataType": "image",
+      "title": "image"
+    }
+  }
 }
