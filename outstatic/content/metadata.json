@@ -1,0 +1,30 @@
+{
+  "commit": "",
+  "generated": "2025-02-18T09:13:59.005Z",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "2340368290",
+        "path": "outstatic/content/projets/evaluation-des-perturbateurs-endocriniens-dans-l-eau-potable.mdx"
+      },
+      "author": {
+        "name": "Mathieu Dutour",
+        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
+      },
+      "collection": "projets",
+      "description": "Analyse de la présence de perturbateurs endocriniens dans l'eau du robinet et développement de méthodes de filtration avancées.",
+      "etat": [
+        {
+          "label": "Terminé",
+          "value": "Terminé"
+        }
+      ],
+      "image": "/images/alexander-schimmeck-YpOhhVGPkyQ-unsplash.jpg",
+      "publishedAt": "2025-02-18T09:18:56.687Z",
+      "slug": "evaluation-des-perturbateurs-endocriniens-dans-l-eau-potable",
+      "status": "published",
+      "title": "Évaluation des perturbateurs endocriniens dans l'eau potable"
+    }
+  ]
+}
