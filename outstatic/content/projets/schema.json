@@ -7,7 +7,7 @@
       "fieldType": "Tags",
       "dataType": "array",
       "title": "etat",
-      "values": []
+      "values": ["Terminé", "En cours"]
     },
     "image": {
       "required": false,
