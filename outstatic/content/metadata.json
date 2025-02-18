@@ -1,6 +1,6 @@
 {
-  "commit": "a6de6d20f4019a15fd0fd24f197708913d5252a2",
-  "generated": "2025-02-18T09:31:50.358Z",
+  "commit": "1bc48040752a5cab3a91dba593b7d302569dc601",
+  "generated": "2025-02-18T09:32:29.159Z",
   "metadata": [
     {
       "__outstatic": {
@@ -115,6 +115,24 @@
       "slug": "nouveau-partenariat-pour-la-recherche-sur-l-eau-potable",
       "status": "published",
       "title": "Nouveau partenariat pour la recherche sur l'eau potable"
+    },
+    {
+      "__outstatic": {
+        "commit": "1bc48040752a5cab3a91dba593b7d302569dc601",
+        "hash": "2910473247",
+        "path": "outstatic/content/actualites/resultats-de-l-etude-sur-la-pollution-sonore.mdx"
+      },
+      "author": {
+        "name": "Mathieu Dutour",
+        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
+      },
+      "collection": "actualites",
+      "description": "Notre étude sur la pollution sonore dans les zones urbaines est terminée. Les résultats montrent un impact significatif sur la santé des résidents.",
+      "image": "/images/elyas-pasban-uAm_c9heHxo-unsplash.jpg",
+      "publishedAt": "2025-02-18T09:37:55.499Z",
+      "slug": "resultats-de-l-etude-sur-la-pollution-sonore",
+      "status": "published",
+      "title": "Résultats de l'étude sur la pollution sonore"
     }
   ]
 }
