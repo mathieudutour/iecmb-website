@@ -10,5 +10,11 @@
     "slug": "actualites",
     "path": "outstatic/content/actualites",
     "children": []
+  },
+  {
+    "title": "Projets",
+    "slug": "projets",
+    "path": "outstatic/content/projets",
+    "children": []
   }
 ]
