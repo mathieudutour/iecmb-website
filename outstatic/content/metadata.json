@@ -1,6 +1,6 @@
 {
-  "commit": "02abcca1e6ba90fb5a20ff27e3c0f67c3004dd39",
-  "generated": "2025-02-18T09:15:27.171Z",
+  "commit": "a6de6d20f4019a15fd0fd24f197708913d5252a2",
+  "generated": "2025-02-18T09:31:50.358Z",
   "metadata": [
     {
       "__outstatic": {
@@ -97,6 +97,24 @@
       "slug": "etude-sur-la-qualite-de-l-air-urbain",
       "status": "published",
       "title": "Étude sur la qualité de l'air urbain"
+    },
+    {
+      "__outstatic": {
+        "commit": "a6de6d20f4019a15fd0fd24f197708913d5252a2",
+        "hash": "1490353392",
+        "path": "outstatic/content/actualites/nouveau-partenariat-pour-la-recherche-sur-l-eau-potable.mdx"
+      },
+      "author": {
+        "name": "Mathieu Dutour",
+        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
+      },
+      "collection": "actualites",
+      "description": "Nous sommes fiers d'annoncer un nouveau partenariat avec l'Université de Paris pour étudier la qualité de l'eau potable dans la région parisienne.",
+      "image": "/images/alexander-schimmeck-YpOhhVGPkyQ-unsplash.jpg",
+      "publishedAt": "2025-02-18T09:36:36.076Z",
+      "slug": "nouveau-partenariat-pour-la-recherche-sur-l-eau-potable",
+      "status": "published",
+      "title": "Nouveau partenariat pour la recherche sur l'eau potable"
     }
   ]
 }
