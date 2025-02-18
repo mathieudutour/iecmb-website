@@ -8,6 +8,12 @@
       "dataType": "array",
       "title": "etat",
       "values": []
+    },
+    "image": {
+      "required": false,
+      "fieldType": "Image",
+      "dataType": "image",
+      "title": "image"
     }
   }
 }
