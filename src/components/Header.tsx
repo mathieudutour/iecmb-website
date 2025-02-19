@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 ${"bg-white/50 backdrop-blur-md border-b border-white/50 text-blue-600 py-2"}`}
+      className={`fixed top-0 left-0 right-0 z-50 ${"bg-white/50 backdrop-blur-md border-b border-white/50 text-blue-900 py-2"}`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link href="/">
@@ -31,7 +31,7 @@ export default function Header() {
             <li>
               <Link
                 href="/nous-aider"
-                className={`px-4 py-2 rounded-md font-semibold transition duration-300 bg-blue-600 text-white hover:bg-blue-700`}
+                className={`px-4 py-2 rounded-md font-semibold transition duration-300 bg-blue-900 text-white hover:bg-blue-700`}
               >
                 Nous Aider
               </Link>
