@@ -17,23 +17,28 @@ import Link from "next/link";
 export default async function Home() {
   const objectives = [
     {
-      icon: <Microscope className="w-6 h-6 text-green-500" />,
+      icon: <Microscope className="w-8 h-8 text-blue-500" />,
+      title: "Recherche Indépendante",
       text: "Développer et partager une connaissance scientifique indépendante des pollutions et polluants, des contaminations qu'ils engendrent et de leurs effets sur la santé des habitants",
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-green-500" />,
+      icon: <MessageCircle className="w-8 h-8 text-green-500" />,
+      title: "Communication Transparente",
       text: "Communiquer les données scientifiques avec transparence et pédagogie",
     },
     {
-      icon: <Lightbulb className="w-6 h-6 text-green-500" />,
+      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />,
+      title: "Propositions Concrètes",
       text: "Proposer des orientations et des actions concrètes à mettre en œuvre aux structures compétentes",
     },
     {
-      icon: <ClipboardCheck className="w-6 h-6 text-green-500" />,
+      icon: <ClipboardCheck className="w-8 h-8 text-purple-500" />,
+      title: "Évaluation des Actions",
       text: "Évaluer les actions menées par les pouvoirs publics en réponse aux propositions de l'association",
     },
     {
-      icon: <FileSearch className="w-6 h-6 text-green-500" />,
+      icon: <FileSearch className="w-8 h-8 text-red-500" />,
+      title: "Recommandations",
       text: "Émettre un avis et des recommandations sur l'efficacité des actions mises en place en lien avec les problèmes de pollutions et de santé du territoire",
     },
   ];
@@ -65,17 +70,36 @@ export default async function Home() {
           </a>
         </div>
       </section>
-      <section id="objectifs" className="py-16 bg-white">
+      <section
+        id="objectifs"
+        className="py-16 bg-gradient-to-b from-white to-gray-50"
+      >
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos Objectifs</h2>
-          <ul className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {objectives.map((objective, index) => (
-              <li key={index} className="flex items-start">
-                <div className="mr-4 mt-1">{objective.icon}</div>
-                <span>{objective.text}</span>
-              </li>
+              <Card
+                key={index}
+                className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mr-4">
+                      <div className="p-3 rounded-full bg-gray-100">
+                        {objective.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {objective.title}
+                      </h3>
+                      <p className="text-gray-600">{objective.text}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
       <section className="py-24 bg-black/20">
