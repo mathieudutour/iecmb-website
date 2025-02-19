@@ -28,8 +28,8 @@ export function ProjectCard({
         <Badge
           className={`absolute top-4 right-4 ${
             project.etat === "En cours"
-              ? "border-green-500 text-green-500"
-              : "border-blue-500 text-blue-500"
+              ? "border-green-400 text-green-400"
+              : "border-blue-400 text-blue-400"
           }`}
         >
           {project.etat === "En cours" ? (
