@@ -1,6 +1,6 @@
 {
-  "commit": "22baa5a6e1f71bbd3f5792cd85a87a6ee38cef99",
-  "generated": "2026-05-28T07:54:20.714Z",
+  "commit": "d829db56692dde3a75c345f941d42dafd373605f",
+  "generated": "2026-05-28T07:54:36.797Z",
   "metadata": [
     {
       "__outstatic": {
@@ -213,31 +213,6 @@
     },
     {
       "__outstatic": {
-        "commit": "3b0fbd42a80de78c39f55ea135446a08353f3015",
-        "hash": "2375523651",
-        "path": "outstatic/content/actualites/assemblee-generale.mdx"
-      },
-      "author": {
-        "name": "JPP",
-        "picture": "https://avatars.githubusercontent.com/u/204351074?v=4"
-      },
-      "categories": [
-        {
-          "label": "Événement",
-          "value": "Événement"
-        }
-      ],
-      "collection": "actualites",
-      "dateEvenement": "2025-04-04T22:00:00.000Z",
-      "description": "Assemblée Générale de L'institut Ecocitoyen du Pays du Mont-Blanc.\nEn matinée, tenue de l’AG. Petite restauration proposée pour le déjeuner. L’après-midi, animations sur la pollutions et la santé environnementale, temps d’échange et moment de convivialité.",
-      "image": "/images/ag-I4Nz.png",
-      "publishedAt": "2025-03-28T15:51:20.497Z",
-      "slug": "assemblee-generale",
-      "status": "published",
-      "title": "Assemblée Générale"
-    },
-    {
-      "__outstatic": {
         "commit": "252f720ef37f13003a7c0cade7566071ae8c34ca",
         "hash": "561280444",
         "path": "outstatic/content/projets/lichens.mdx"
@@ -411,38 +386,6 @@
     },
     {
       "__outstatic": {
-        "commit": "7b55af6e0d744684d6c216fabd5a727478b57753",
-        "hash": "4209566698",
-        "path": "outstatic/content/actualites/webinaire-industrie-pollution-et-sante-le-cas-des-boues-rouges-de-gardanne.mdx"
-      },
-      "author": {
-        "name": "Mathieu Dutour",
-        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
-      },
-      "categories": [
-        {
-          "label": "Eau",
-          "value": "Eau"
-        },
-        {
-          "label": "Sol",
-          "value": "Sol"
-        },
-        {
-          "label": "Événement",
-          "value": "Événement"
-        }
-      ],
-      "collection": "actualites",
-      "description": "Les boues rouges de Gardanne sont devenues un symbole des tensions entre industrie, pollution environnementale, santé publique et justice sociale en Méditerranée. Poussières rouges, pollution marine, controverses sanitaires : ce conflit soulève des questions essentielles sur la manière dont la pollution est produite, mesurée et débattue.",
-      "image": "/images/1769095789384-E3MT.jpg",
-      "publishedAt": "2026-01-29T09:15:39.032Z",
-      "slug": "webinaire-industrie-pollution-et-sante-le-cas-des-boues-rouges-de-gardanne",
-      "status": "draft",
-      "title": "Webinaire – Industrie, pollution et santé : le cas des boues rouges de Gardanne"
-    },
-    {
-      "__outstatic": {
         "commit": "2a6b78d3070f57212551870a26b50957c2c137ba",
         "hash": "3378165435",
         "path": "outstatic/content/actualites/nouvelle-permanence-a-l-institut-eco-citoyen-du-pays-du-mont-blanc.mdx"
@@ -607,26 +550,6 @@
       "slug": "conference-sur-les-effets-des-microplastiques-dans-les-lacs-de-montagne",
       "status": "published",
       "title": "Conférence sur les effets des microplastiques dans les lacs de montagne "
-    },
-    {
-      "__outstatic": {
-        "commit": "829b3015d53282131ec982ff5edf8bd93c46af93",
-        "hash": "387094915",
-        "path": "outstatic/content/evenements/assemblee-generale.mdx"
-      },
-      "author": {
-        "name": "Mathieu Dutour",
-        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
-      },
-      "categories": [
-      ],
-      "collection": "evenements",
-      "description": "Assemblée Générale de L'institut Ecocitoyen du Pays du Mont-Blanc.\nEn matinée, tenue de l’AG. Petite restauration proposée pour le déjeuner. L’après-midi, animations sur la pollutions et la santé environnementale, temps d’échange et moment de convivialité.",
-      "image": "/images/ag-I4Nz.png",
-      "publishedAt": "2025-04-04T22:00:00.000Z",
-      "slug": "assemblee-generale",
-      "status": "published",
-      "title": "Assemblée Générale 2025"
     }
   ]
 }
