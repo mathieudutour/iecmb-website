@@ -1,6 +1,6 @@
 {
-  "commit": "c223e9a56f735a2b13b1d70c477a56728c092e56",
-  "generated": "2026-05-28T07:53:51.528Z",
+  "commit": "5ba92bd461351ac00465d9dc6ddf8458294b8938",
+  "generated": "2026-05-28T07:54:08.985Z",
   "metadata": [
     {
       "__outstatic": {
@@ -172,35 +172,6 @@
     },
     {
       "__outstatic": {
-        "commit": "4653317a0be735caa170adb29770fd7a173e0f88",
-        "hash": "3572727212",
-        "path": "outstatic/content/actualites/conference-particules-ultrafines.mdx"
-      },
-      "author": {
-        "name": "JPP",
-        "picture": "https://avatars.githubusercontent.com/u/204351074?v=4"
-      },
-      "categories": [
-        {
-          "label": "Air",
-          "value": "Air"
-        },
-        {
-          "label": "Événement",
-          "value": "Événement"
-        }
-      ],
-      "collection": "actualites",
-      "dateEvenement": "2025-01-27T23:00:00.000Z",
-      "description": "Le 28 janvier Jean-Luc Jaffrezo (IGE), Gaëlle Uzu (IGE) et Guillaume Brulfert (ATMO) sont intervenus au cours d’une conférence : qualité de l’air dans la vallée de l’Arve : quel impact des particules ultrafines ?",
-      "image": "/images/puf_conf-gwMT.png",
-      "publishedAt": "2025-01-14T23:00:00.000Z",
-      "slug": "conference-particules-ultrafines",
-      "status": "published",
-      "title": "Conférence sur les particules ultrafines"
-    },
-    {
-      "__outstatic": {
         "commit": "d5902744f117cde93b807e87978616e24b419e7c",
         "hash": "2518983759",
         "path": "outstatic/content/actualites/nouveaux-locaux-institut.mdx"
@@ -327,36 +298,6 @@
       "slugProjet": "etude-epidemiologique",
       "status": "published",
       "title": "Webinaire en santé environnementale - 10 mars 2025"
-    },
-    {
-      "__outstatic": {
-        "commit": "c9d14dfa8469b825986510c3d46504c7ac43515d",
-        "hash": "3293976779",
-        "path": "outstatic/content/actualites/journees-etude-lichens.mdx"
-      },
-      "author": {
-        "name": "JPP",
-        "picture": "https://avatars.githubusercontent.com/u/204351074?v=4"
-      },
-      "categories": [
-        {
-          "label": "Air",
-          "value": "Air"
-        },
-        {
-          "label": "Événement",
-          "value": "Événement"
-        }
-      ],
-      "collection": "actualites",
-      "dateEvenement": "2025-05-20T22:00:00.000Z",
-      "description": "Du 20 au 22 mai, journées d’étude sur les lichens, en partenariat avec L’institut Ecocitoyen de Fos sur Mer, ouvertes aux partenaires associatifs du territoire du Mont-Blanc.",
-      "image": "",
-      "publishedAt": "2025-03-28T15:54:17.537Z",
-      "slug": "journees-etude-lichens",
-      "slugProjet": "lichens",
-      "status": "published",
-      "title": "A la découverte des lichens !"
     },
     {
       "__outstatic": {
@@ -678,31 +619,6 @@
     },
     {
       "__outstatic": {
-        "commit": "70488145f6ceb94b7023b3f99a58db79526aaea5",
-        "hash": "4094031552",
-        "path": "outstatic/content/evenements/journees-etude-lichens.mdx"
-      },
-      "author": {
-        "name": "Mathieu Dutour",
-        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
-      },
-      "categories": [
-        {
-          "label": "Air",
-          "value": "air"
-        }
-      ],
-      "collection": "evenements",
-      "description": "Du 20 au 22 mai, journées d’étude sur les lichens, en partenariat avec L’institut Ecocitoyen de Fos sur Mer, ouvertes aux partenaires associatifs du territoire du Mont-Blanc.",
-      "image": "/images/capture-d--cran-du-2025-03-24-17-03-17-E5OT.png",
-      "publishedAt": "2025-05-20T22:00:00.000Z",
-      "slug": "journees-etude-lichens",
-      "slugProjet": "lichens",
-      "status": "published",
-      "title": "A la découverte des lichens !"
-    },
-    {
-      "__outstatic": {
         "commit": "47657f090943b7de66a0df4480f8c8f20e7bf1f7",
         "hash": "1967154179",
         "path": "outstatic/content/evenements/journees-etudes-epidemiologiques.mdx"
@@ -745,30 +661,6 @@
       "slug": "conference-sur-les-effets-des-microplastiques-dans-les-lacs-de-montagne",
       "status": "published",
       "title": "Conférence sur les effets des microplastiques dans les lacs de montagne "
-    },
-    {
-      "__outstatic": {
-        "commit": "dcbd31e9553461d4aaf20f5eecf94d63b560a1cd",
-        "hash": "3501572595",
-        "path": "outstatic/content/evenements/conference-particules-ultrafines.mdx"
-      },
-      "author": {
-        "name": "Mathieu Dutour",
-        "picture": "https://avatars.githubusercontent.com/u/3254314?v=4"
-      },
-      "categories": [
-        {
-          "label": "Air",
-          "value": "air"
-        }
-      ],
-      "collection": "evenements",
-      "description": "Le 28 janvier Jean-Luc Jaffrezo (IGE), Gaëlle Uzu (IGE) et Guillaume Brulfert (ATMO) sont intervenus au cours d’une conférence : qualité de l’air dans la vallée de l’Arve : quel impact des particules ultrafines ?",
-      "image": "/images/puf_conf-gwMT.png",
-      "publishedAt": "2025-01-27T23:00:00.000Z",
-      "slug": "conference-particules-ultrafines",
-      "status": "published",
-      "title": "Conférence sur les particules ultrafines"
     },
     {
       "__outstatic": {
