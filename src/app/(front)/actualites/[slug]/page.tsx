@@ -13,12 +13,48 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { normalizeCategories } from "@/lib/news";
 import { formatFrenchDate } from "@/lib/date";
+import {
+  createNotFoundMetadata,
+  createPageMetadata,
+  normalizeDescription,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  createBreadcrumbStructuredData,
+  createEventStructuredData,
+  createNewsArticleStructuredData,
+} from "@/lib/structured-data";
+
+type ActualitePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: ActualitePageProps) {
+  const newsItem = await getData(await params);
+
+  if (!newsItem) {
+    return createNotFoundMetadata("Article introuvable");
+  }
+
+  const title = newsItem.title.trim();
+  const description = normalizeDescription(
+    newsItem.description,
+    `Actualité de l’Institut Ecocitoyen du Pays du Mont-Blanc : ${title}.`,
+  );
+
+  return createPageMetadata({
+    title,
+    description,
+    path: `/actualites/${newsItem.slug}`,
+    image: newsItem.image,
+    type: "article",
+    publishedTime: newsItem.publishedAt.toISOString(),
+  });
+}
 
 export default async function ActualitePage({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: ActualitePageProps) {
   const newsItem = await getData(await params);
 
   if (!newsItem) {
@@ -29,9 +65,41 @@ export default async function ActualitePage({
   const displayDate = isEvent
     ? newsItem.dateEvenement || newsItem.publishedAt
     : newsItem.publishedAt;
+  const title = newsItem.title.trim();
+  const description = normalizeDescription(
+    newsItem.description,
+    `Actualité de l’Institut Ecocitoyen du Pays du Mont-Blanc : ${title}.`,
+  );
+  const path = `/actualites/${newsItem.slug}`;
+  const contentStructuredData = isEvent
+    ? createEventStructuredData({
+        title,
+        description,
+        path,
+        image: newsItem.image,
+        publishedAt: displayDate.toISOString(),
+        location: newsItem.lieu
+          ? { name: newsItem.lieu, address: newsItem.adresse }
+          : undefined,
+      })
+    : createNewsArticleStructuredData({
+        title,
+        description,
+        path,
+        image: newsItem.image,
+        publishedAt: newsItem.publishedAt.toISOString(),
+        author: newsItem.author?.name,
+      });
+  const breadcrumbStructuredData = createBreadcrumbStructuredData([
+    { name: "Accueil", path: "/" },
+    { name: "Actualités", path: "/actualites" },
+    { name: title, path },
+  ]);
 
   return (
     <main className="grow py-16 pt-32">
+      <JsonLd data={contentStructuredData} />
+      <JsonLd data={breadcrumbStructuredData} />
       <article className="container min-h-screen mx-auto px-4">
         <Link
           href="/actualites"
@@ -122,6 +190,9 @@ type DetailDocument = {
   categories?: { value: string }[];
   dateEvenement?: string;
   slugProjet?: string;
+  author?: { name?: string };
+  lieu?: string;
+  adresse?: string;
 };
 
 async function getData(params: { slug: string }) {
@@ -135,6 +206,9 @@ async function getData(params: { slug: string }) {
     "categories",
     "dateEvenement",
     "slugProjet",
+    "author",
+    "lieu",
+    "adresse",
   ];
 
   const evenement = getDocumentBySlug(
