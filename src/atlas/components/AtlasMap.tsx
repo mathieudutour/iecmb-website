@@ -95,7 +95,7 @@ export default function AtlasMap({ inventory, bathing, riverAssessments, riverCa
   const instituteWater = useInstituteWaterDemo();
   const activeCount = Object.values(enabled).filter(Boolean).length + bioDemo.activeCount + soilDemo.activeCount + groundwaterLayer.activeCount + instituteWater.activeCount + georisquesLayer.activeCount;
 
-  return <><div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  return <><div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] overflow-clip rounded-2xl border border-slate-200 bg-white shadow-sm">
     <AtlasLayerSidebar activeCount={activeCount}>
       <div className="space-y-6">
         {LAYER_GROUPS.map((group) => <section key={group.id} aria-labelledby={`atlas-layer-group-${group.id}`}>
@@ -115,7 +115,7 @@ export default function AtlasMap({ inventory, bathing, riverAssessments, riverCa
             </label>
             {enabled[layer.id] && <div className="mt-3 space-y-3">
               <p className="text-xs text-slate-600">{layer.description}</p>
-              <label className="flex items-center gap-2 text-xs text-slate-600">Opacité<input aria-label={`Opacité · ${layer.title}`} className="min-w-0 flex-1 accent-blue-iec" type="range" min="0.15" max="1" step="0.05" value={opacity[layer.id]} onChange={(event) => setOpacity((prev) => ({ ...prev, [layer.id]: Number(event.target.value) }))} /><span>{Math.round(opacity[layer.id] * 100)} %</span></label>
+              {(layer.id === "wood" || layer.id === "traffic") && <label className="flex items-center gap-2 text-xs text-slate-600">Opacité<input aria-label={`Opacité · ${layer.title}`} className="min-w-0 flex-1 accent-blue-iec" type="range" min="0.15" max="1" step="0.05" value={opacity[layer.id]} onChange={(event) => setOpacity((prev) => ({ ...prev, [layer.id]: Number(event.target.value) }))} /><span>{Math.round(opacity[layer.id] * 100)} %</span></label>}
               {layer.id === "inventory" && emissions.error && <p role="status" className="text-xs text-amber-800">{emissions.error}</p>}
               {layer.id === "inventory" ? inventory ? <p className="text-xs text-slate-500">{inventory.sites.length} sites cartographiés · {inventory.unmappedSites.length} sans coordonnées, consultables dans l’inventaire.<br />Inventaire récupéré le {dateLabel(inventory.lastUpdated)}.</p> : <p role="alert" className="text-xs text-red-700">Inventaire indisponible. Les autres couches restent accessibles.</p> : <div aria-live="polite" className="text-xs">
                 {state?.status === "loading" && <p className="text-slate-500">Chargement du fournisseur…</p>}
@@ -132,7 +132,7 @@ export default function AtlasMap({ inventory, bathing, riverAssessments, riverCa
                 <p>Import automatique quotidien. Dates de récupération dans chaque fiche.</p>
                 {bathing.points.some((point) => point.seasons.some((season) => season.error)) && <p role="alert" className="text-amber-800">Certaines saisons n’ont pas pu être récupérées. Les fiches donnent accès aux sources officielles.</p>}
               </div>}
-              {layer.id === "rivers" && <div className="text-xs text-slate-600 space-y-2"><p>Icône vagues · état ou potentiel écologique : vert = très bon / bon, orange = moyen, rouge = médiocre / mauvais. Classe officielle et état chimique séparé dans la fiche.</p><p>Évaluations importées quotidiennement{riverAssessments.fetchedAt ? ` · récupérées le ${dateLabel(riverAssessments.fetchedAt)}` : ""}. Actualiser recharge les dernières données publiées, sans interroger le fournisseur.</p>{riverAssessments.error && <p role="alert" className="text-amber-800">{riverAssessments.error}</p>}</div>}
+              {layer.id === "rivers" && <div className="text-xs text-slate-600 space-y-2"><p>Icône vagues · état ou potentiel écologique : vert = très bon / bon, orange = moyen, rouge = médiocre / mauvais. Classe officielle et état chimique séparé dans la fiche.</p><p>Évaluations importées quotidiennement{riverAssessments.fetchedAt ? ` · récupérées le ${dateLabel(riverAssessments.fetchedAt)}` : ""}.</p>{riverAssessments.error && <p role="alert" className="text-amber-800">{riverAssessments.error}</p>}</div>}
               {layer.id === "drinking" && <p className="text-xs text-slate-600">Icône verre · vert : derniers contrôles conformes pour tous les réseaux recensés. Orange : dérogation ou référence non respectée sur au moins un réseau. Rouge : limite non respectée sur au moins un réseau. Contour seul : couverture insuffisante. Dates et réseaux concernés dans la fiche.</p>}
               {layer.id === "wood" && <div className="text-xs space-y-2">
                 <p className="font-semibold text-amber-800">Données fictives · aucune valeur réelle</p>
@@ -149,8 +149,8 @@ export default function AtlasMap({ inventory, bathing, riverAssessments, riverCa
         </section>)}
       </div>
     </AtlasLayerSidebar>
-    <div className="relative z-0 min-w-0">
-      <MapContainer bounds={[[AREA.south, AREA.west], [AREA.north, AREA.east]]} style={{ height: "740px", width: "100%" }} scrollWheelZoom={true}>
+    <div className="relative z-0 min-w-0 h-[740px] lg:sticky lg:top-32 lg:self-start lg:h-[min(740px,calc(100dvh-144px))]">
+      <MapContainer bounds={[[AREA.south, AREA.west], [AREA.north, AREA.east]]} style={{ height: "100%", width: "100%" }} scrollWheelZoom={true}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' />
         <Recenter /><ScaleControl position="bottomleft" />
         {groundwaterLayer.markers}
