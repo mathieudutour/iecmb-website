@@ -1,6 +1,6 @@
 {
-  "commit": "8cf4fa5589e2bcc03ce5fb35a8a3fa3823d86730",
-  "generated": "2026-10-27T08:25:12.973Z",
+  "commit": "bb985f4ee6610e80c7ee6f13febd46a932aa629e",
+  "generated": "2026-10-27T08:25:24.120Z",
   "media": [
     {
       "__outstatic": {
@@ -55,18 +55,6 @@
       "alt": "",
       "filename": "affiche-les-mardis-de-l-institut--a4--paysage----1--MxMj.png",
       "publishedAt": "2026-10-27T08:17:28.380Z",
-      "source": "images",
-      "type": "image"
-    },
-    {
-      "__outstatic": {
-        "commit": "5f90299151f631a84061914d1df304914914a58d",
-        "hash": "4284574143",
-        "path": "public/images/affiche-les-mardis-de-l-institut--a4--paysage---E4OD.png"
-      },
-      "alt": "",
-      "filename": "affiche-les-mardis-de-l-institut--a4--paysage---E4OD.png",
-      "publishedAt": "2026-10-23T14:36:32.270Z",
       "source": "images",
       "type": "image"
     },
@@ -235,18 +223,6 @@
       "alt": "",
       "filename": "epidemiologie-Y3Mz.png",
       "publishedAt": "2025-03-28T15:08:17.472Z",
-      "type": "image"
-    },
-    {
-      "__outstatic": {
-        "commit": "0dbf82cc71a35194290e97d16e50276dabd7da3b",
-        "hash": "2300884533",
-        "path": "public/images/formation-sant--environnementale--6--MzMz.png"
-      },
-      "alt": "",
-      "filename": "formation-sant--environnementale--6--MzMz.png",
-      "publishedAt": "2026-10-23T14:05:15.019Z",
-      "source": "images",
       "type": "image"
     },
     {
